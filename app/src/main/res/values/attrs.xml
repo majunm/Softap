@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--INoticeBoardView-->
+    <declare-styleable name="INoticeBoardView">
+        <!--动画时间-->
+        <attr name="INoticeBoardView_AnimTime" format="integer|reference" />
+        <!--竖直方向动画时间步长 动画时间 除以 时间步长-->
+        <attr name="INoticeBoardView_Vertical_Duration_Step" format="integer|reference" />
+        <!--竖直方向偏移-->
+        <attr name="INoticeBoardView_Vertical_OffsetX" format="integer|reference" />
+        <!--公告栏执行方向-->
+        <attr name="INoticeBoardView_Direction">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>
