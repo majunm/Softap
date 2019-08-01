@@ -81,6 +81,8 @@ attrs.xml
     </declare-styleable>
 </resources>
 ```
+##### 如有需要
+[公告栏Layout](https://github.com/majunm/Softap)
 
 ## 许可证
 
