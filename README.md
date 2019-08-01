@@ -84,7 +84,7 @@ attrs.xml
 
 ## 许可证
 
-    Copyright 2019 YvesCheung
+    Copyright 2019 majunm
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -98,4 +98,4 @@ attrs.xml
     See the License for the specific language governing permissions and
     limitations under the License.
 
-  [1]: https://github.com/YvesCheung/SlidableLayout/tree/master/app/src/main/java/com/yy/mobile/slidablelayout
+  [1]: https://github.com/majunm/Softap/blob/master/app/src/main/java/com/example/tst/widget
