@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.example.tst.widget.RaffleLayout
+        android:id="@+id/RaffleLayout"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/bg2"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <com.example.tst.widget.RaffleLayout
+        android:id="@+id/RaffleLayout2"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/bg2"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#484"
+        android:src="@mipmap/ball1_icon"
+      />
+</LinearLayout>

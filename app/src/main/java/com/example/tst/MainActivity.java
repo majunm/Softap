@@ -2,25 +2,36 @@ package com.example.tst;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.tst.widget.BallLayer;
 import com.example.tst.widget.INoticeBoardView;
+import com.example.tst.widget.RaffleLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     @Override
-    protected void onCreate( Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getContentViewRsId());
-        initView();
+        RaffleLayout mRaffleLayout;
+//        setContentView(mRaffleLayout = new RaffleLayout(this));
+        setContentView(R.layout.raffle);
+        mRaffleLayout = findViewById(R.id.RaffleLayout);
+        RaffleLayout mRaffleLayout2 = findViewById(R.id.RaffleLayout2);
+        ImageView icon = findViewById(R.id.icon);
+        mRaffleLayout2.setShowAssist(true);
+        BallLayer.dispose(icon, true);
+//        setContentView(getContentViewRsId());
+//        initView();
     }
 
     protected int getContentViewRsId() {
@@ -64,21 +75,26 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onBindViewHolder(View itemView, String itemData) {
-                TextView tvs = itemView.findViewById(R.id.tv_line);
-                tvs.setText(mCurrentIndex + "|" + itemData);
-                // tvs.setBackgroundColor(mCurrentIndex % 2 == 0 ? Color.RED : Color.GREEN);
-                tvs.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Log.e("INoticeView2", TAG + ":------------点击事件---------------------------------");
-                    }
-                });
+                ((TextView) itemView).setText(mCurrentIndex + "|" + itemData);
+                ((TextView) itemView).setGravity(Gravity.CENTER_VERTICAL);
+//                TextView tvs = itemView.findViewById(R.id.tv_line);
+//                tvs.setText(mCurrentIndex + "|" + itemData);
+//                // tvs.setBackgroundColor(mCurrentIndex % 2 == 0 ? Color.RED : Color.GREEN);
+//                tvs.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Log.e("INoticeView2", TAG + ":------------点击事件---------------------------------");
+//                    }
+//                });
             }
 
             @Override
             protected View onCreateViewHolder(LayoutInflater inflater, ViewGroup parent, int viewType) {
 //                return inflater.inflate(R.layout.lines, parent,false);
-                return inflater.inflate(R.layout.lines, null);
+//                return inflater.inflate(R.layout.lines, null);
+                TextView tv = new TextView(parent.getContext());
+
+                return tv;
             }
         });
 
